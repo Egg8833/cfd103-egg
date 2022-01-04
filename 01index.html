@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./goodtime.css">
+    <link rel="stylesheet" href="./greid2.css">
+    <link rel="stylesheet" href="./bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <title>好時光咖啡豆</title>  
+    <style> 
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
+    body {
+            background-image: url(./pic/body-bg.png);
+            background-repeat: repeat;
+            background-attachment: scroll;
+            background-position: center;
+           
+        }
+
+    .bg{
+        background-color: rgba(245, 212, 163, 0.8);
+        padding: 30px 0px;
+    }
+
+
+    /* ------輪播圖---- */
+
+    .slider {
+        width: 100%;
+        margin: auto;
+    }
+    .slider_pic img {
+        width: 100%;
+        vertical-align: top;
+    }
+
+  /* ----品牌精神------- */
+        .faith {
+            background: url(./pic/—Pngtree—full\ light\ textured\ paper\ background_972439.jpg);
+            padding:15px 0px;
+        }
+        .wrap_faith
+        {
+            max-width:1200px;
+            margin: auto;
+           
+        }
+        .wrap_faith .item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+            
+        }
+        .wrap_faith .item .pic img {
+            width: 100%;
+            vertical-align: top;
+            border-radius: 10px;
+            box-shadow:  5px 5px 10px rgb(165, 164, 164);
+        }
+        .wrap_faith .item .pic{
+            width: 55%;
+            flex-shrink: 0;
+        }
+        .wrap_faith .item .txt{
+            width: 55%;
+            flex-shrink: 0;
+            padding: 20px 20px;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow:  5px 5px 3px rgba(254,184,93, 0.8);
+        }
+        .wrap_faith .item .txt h2 {
+            text-align: center;
+            color: #8f360e;
+            font-size: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 500;
+            padding-bottom: 20px;
+            position: relative;
+        }
+        .wrap_faith .item .txt h2::after{
+            content: '';
+            width: 4px;
+            height: 45px;
+            background-color: rgba(36, 24, 6, 0.8);
+            position: absolute;
+            top: 9px;
+            left: 212px;
+           
+        }
+        .wrap_faith .item .txt p {
+            font-size: 25px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 300;
+            padding: 5px 0px;
+        }
+        .wrap_faith .item > :first-child{
+            margin-right: -5%;
+        }
+        .wrap_faith .item:nth-child(1) .txt{background-color: rgba(254,184,93,0.8);}
+        .wrap_faith .item:nth-child(2) .txt{background-color: rgba(238, 225, 105, 0.8);box-shadow:  5px 5px 3px rgba(238, 225, 105, 0.8);}
+        .wrap_faith .item:nth-child(3) .txt{background-color: rgba(254,184,93,0.8);}
+
+         /* ///////1024 */
+        @media screen and (max-width:1024px) {
+        .wrap_faith .item .pic{
+            width: 50%;
+          
+        }
+        .wrap_faith .item .txt{
+            width: 50%;
+            padding: 10px 10px;
+            
+        }
+        .wrap_faith .item .txt p {
+            font-size: 24px;
+        }
+        .wrap_faith .item .txt h2 {
+            font-size: 30px;}
+        .wrap_faith .item > :first-child{
+            margin-right: -3%;
+        }
+        .wrap_faith .item .txt h2::after{
+            content: '';
+            background-color: transparent;}
+    }
+
+    @media screen and (max-width:768px) {
+        .wrap_faith .item .txt p {
+            font-size: 12px;
+            padding-bottom: 10px;
+        }
+        .wrap_faith .item .txt h2 {
+            font-size: 20px;}
+    
+        .wrap_faith .item > :first-child{
+            margin-right: 0;}
+        .wrap_faith .item:nth-child(2) .txt    {
+            margin-right: 10px;
+        }        }
+
+    @media screen and (max-width:500px) {
+        .wrap_faith .item .txt p {
+            font-size: 10px;
+        }
+        .wrap_faith .item .txt h2 {
+            font-size: 15px;
+        }
+        .wrap_faith .item:nth-child(2) .txt    {
+            margin-right: 5px;
+        }        }           
+   
+        
+    
+
+        /* 咖啡模板介紹 */
+        
+        .intr_container {
+            max-width: 1000px;
+            margin:auto;
+            margin-top: 50px;
+        }
+        .intr_container .item {
+            width: 40%;
+            margin: auto;
+            position: relative;     
+        }
+        .intr_container .pic{
+            width: 100%;
+            display: none;
+        }
+        .intr_container .item .txt {
+            position: absolute;
+            top: 20px;
+            right: -115px;
+        } 
+        .intr_container .item .txt h2 {
+            padding: 10px 0px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 500;
+            color:rgb(88, 37, 37);
+        } 
+        .intr_container .item .txt p {
+            display: block;
+            font-family: 'Noto Sans TC', sans-serif;
+        } 
+        .intr_container .item .txt1{      
+            right:-130px }
+        .intr_container .item .txt2{
+            top:30px;
+            left:-150px;}
+        .intr_container .item .txt3{
+            right: -135px
+        }
+        .intr_container .item .txt h2::after{
+            content: '';
+			position: absolute;
+            height: 3px;
+			width: 100px;
+            margin-left: 5px;
+			background-color: #aaa;
+			top: 25px;
+            left: -110px;
+        }
+        .intr_container .item .txt2 h2::after{
+            content: '';
+            left:120px}
+        .intr_container .item span {
+            position: absolute;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 22px;
+            left:-150px;
+            top: 70px;   
+            opacity: 0; 
+            padding:3px 10px ;
+        }
+        .intr_container .item .mid-f {
+            width: 160px;
+            left:410px;
+            top: 70px;
+            }
+        .intr_container .item:hover span{
+            background-color: rgba(250, 157, 18, 0.459);  
+            opacity: 1;
+        }
+        .intr_container .item img {
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+
+       
+        .intr_container .item:nth-child(1){
+            animation: img1 4s 2s forwards;}
+            
+        .intr_container .item:nth-child(2){
+            animation: img2 4s 2s forwards;           }
+        .intr_container .item:nth-child(3){
+            animation: img3 4s 2s forwards; }
+
+        @keyframes img1 {
+            0%{top:-20px;}
+            100%{top:0px;}
+            }
+        @keyframes img2 {
+            0%{top:0px;}
+            100%{top:-45px;}
+            }
+        @keyframes img3 {
+            0%{top:0px;left:0px}
+            100%{top:-85px;left:-5px;}
+            }
+
+            /* ///////1024px */
+
+        @media screen and (max-width:1024px) {
+            .intr_container .item {
+            width: 30%;}
+            .intr_container .item span {
+            font-size: 20px;}
+            .intr_container .item .mid-f {
+            left:250px;
+            top: 50px;
+        }
+        @keyframes img1 {
+            0%{top:-20px;}
+            100%{top:0px;}
+            }
+        @keyframes img2 {
+            0%{top:0px;}
+            100%{top:-25px;}
+            }
+        @keyframes img3 {
+            0%{top:0px;left:0px}
+            100%{top:-47px;left:-5px;}
+            }    }
+        
+
+
+        @media screen and (max-width:768px) {
+            .intr_container {
+                width: 100%;
+            }
+            .intr_container .item .txt {
+                display: none;
+            }
+            .intr_container .item  {
+                display: none;
+            }
+            .intr_container .pic {
+                display: unset;
+                width: 100%;
+                margin: auto;
+            }
+            .intr_container .pic img{
+                width: 100%;
+                vertical-align: middle;
+            }     }
+
+        /* ////烘培度選擇 */
+        .markc {
+            max-width: 1200px;
+            margin:auto;
+            margin-bottom: 50px;
+            text-align: center;
+            
+        }
+        .markc a {
+            text-decoration: none;
+            padding: 0px 10px;
+            font-size: 25px;   
+            list-style: none;
+            text-decoration: none; 
+            color:#8f360e;
+            cursor: pointer;     
+        }
+        .pic {
+            position: relative;
+            right: 10px;
+        }
+        .dry_bean {
+            display: flex;
+            flex-direction: column;
+            border: rosybrown 1px solid;
+        }
+        .dry_bean:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .dry_bean:hover img {
+        background-color: rgb(167, 154, 154);}
+        .dry_bean img {
+            background-color: white;
+            vertical-align: top;
+            width: 100%;
+        }
+        .dry_bean .txt {
+            background-color: #dbcec8;
+            padding-bottom: 5px;
+            
+        }
+        .dry_bean .txt h2 {
+            font-size: 30px;
+            padding: 5px 0px;
+            color:#8f360e;
+            text-align: center;
+            }
+            
+        .dry_bean .txt p {
+            font-size: 25px;
+            text-align: right;
+            padding-right: 10px;
+        }
+        .col-6  a {
+            list-style: none;
+            text-decoration: none;
+        }
+     
+        @media screen and (max-width:768px) {
+        .markc a {
+            font-size: 15px; }
+        .dry_bean .txt h2 {
+            font-size: 20px;
+
+        }   
+        }
+
+        
+
+    /* --------暢銷咖啡豆------- */
+    .bean_item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #dbcec8;
+            border: rosybrown 1px solid;
+        }
+        .bean_item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .bean_item:hover img {
+        background-color: rgb(167, 154, 154);}
+        .bean_item img {
+            background-color: white;
+            vertical-align: top;
+            width: 100%;
+        }
+        .bean_item .txt {
+            background-color: #dbcec8;
+            
+        }
+        .bean_item .txt h2 {
+            font-size: 30px;
+            padding: 5px 0px;
+            color:#8f360e;
+            text-align: center;
+            }
+            
+        .bean_item .txt p {
+            font-size: 25px;
+            text-align: right;
+            padding-right: 10px;
+            padding-bottom: 5px;
+        }
+        .btn {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .btn > button {
+            padding: 10px;
+            line-height: 15px;
+            cursor: pointer;
+        }
+       
+        .goshop {
+            font-size: 18px;
+            height: 40px;
+            padding: 0px 10px;
+            margin-bottom: 10px;  
+            width:120px;
+
+        }
+    
+
+        .bean_item1:before{ content: '';
+        border-top: 25px solid rgb(255, 153, 0);    
+        border-right: 25px solid rgb(255, 153, 0);    
+        border-left: 25px solid rgb(255, 153, 0);    
+        border-bottom: 25px solid transparent;  
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        }
+    
+        .bean_item1::after {content:'熱賣';
+        color: rgb(226, 27, 27);
+        position: absolute;
+        top: 1px;
+        left: 7px;
+        z-index: 2;
+        }
+
+        @media screen and (max-width:768px) {
+        .bean_item .txt h2 {
+            font-size: 20px; } 
+        .goshop {
+            font-size: 10px;}   
+        }
+ 
+    /* ---------咖啡學院------ */
+
+      
+    .coffee_container {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        .coffee_item {
+            margin-bottom: 30px;
+            position: relative;
+            
+           
+        }
+        .coffee_item img :hover {
+            background: violet;
+            border-radius: 10px;
+        }
+        .coffee_item img {
+            width: 100%;
+            vertical-align: top;
+            border-radius: 5%;
+            box-shadow: 3px 3px 5px rgb(197, 189, 189);
+        }
+        .coffee_item .txt {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            padding: 20px;
+            background-color: rgb(0,0,0,.6);
+            border-radius: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity .5s;
+            
+        }
+        .coffee_item:hover .txt {
+            opacity: 1;  
+          
+        }
+        .coffee_item .txt h2 {
+            font-size: 28px;
+            color: bisque;
+            text-align: center;
+        }
+        .coffee_item .txt h2::after{
+            content: '';
+            display: block;
+            width: 0%;
+            height: 2px;
+            margin: 10px 0px;           
+            background-color: bisque; 
+            transition: width .5s,.5s;
+        }
+        .coffee_item:hover .txt h2::after{
+            content: '';
+            width: 100%;  
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <input type="checkbox" id="menu-control">
+
+    <header class="main-header">
+        <!-- logo -->
+        <h1 class="logo">
+            <a href="./01index.html" class="logo">
+                <img src="./pic/logo.png">
+            </a>
+        </h1>
+        <!-- 漢堡 -->
+        <label class="hb" for="menu-control">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <!-- 選單 -->
+        <nav class="main-nav">
+            <a href="./02brand.html" >關於好時光</a>
+            <a href="./03coffee bean.html">精選咖啡豆</a>
+            <a href="./04equipment.html">咖啡器材</a>
+            <a href="./05school.html">咖啡學院</a>
+          
+           </nav>
+    </header>
+    
+    <!-- 輪播圖 -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./pic/banner/banner2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./pic/banner/專業形象介紹2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./pic/banner/banner1.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+ 
+
+    <!-- -----精神理念  -->
+    <section class="faith"> 
+    <div class="bean_title" >
+        <h2>品牌精神</h2>
+    </div>
+
+    <div class="wrap_faith">
+        <div class="item">
+            <div class="pic">
+                <img src="./pic/faith/1 (3).jpg">
+            </div>
+            <div class="txt">
+                <h2>專業烘焙</h2>
+                <p>本店烘焙師擁有國際認證及多年烘焙經驗，</p>
+                <p>以獨特的直火式烘焙加上科學化的數據，</p><p>提供不同以往的咖啡風格。</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="txt">
+                <h2>精心挑選</h2>
+                <p>每批採購的生豆有專業杯測師把關，</p>
+                <p>達到我們的品質標準才進行購買，</p>
+                <p>每粒咖啡豆皆精挑細選,給顧客最新鮮的豆子。</p>
+            </div>
+            <div class="pic">
+                <img src="./pic/faith/1 (2).jpg">
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="pic">
+                <img src="./pic/faith/1 (1).jpg">
+            </div>
+            <div class="txt">
+                <h2>品質穩定</h2>
+               <p>首席烘焙師以高超的技術少量精烘，</p><p>確保每一顆咖啡豆的品質，</p><p>堅持給顧客最新鮮的咖啡豆。</p>
+            </div>
+        </div>
+        </div>
+    </div>     
+</section>
+
+<div class="bean_title">
+    <h2>好時光咖啡豆</h2>
+</div>
+
+ <!-- 咖啡豆模板介紹 -->
+<div class="intr_container">
+    <div class="item">
+        <span>花果香咖啡</span>
+        <div class="txt txt1">
+            <h2>淺焙烘焙</h2>
+            <p>－花果香氣譜</p>
+        </div>
+        <img src="./pic/coffee-bean_03.png" alt="" width="">
+    </div>    
+    <div class="item">
+        <span class="mid-f">中焙經典咖啡</span>
+        <div class="txt txt2">
+            <h2 >中度烘焙</h2>
+            <p>－均勻表現香氣</p>
+          
+        </div>
+        <img src="./pic/coffee-bean_06.png" alt="">
+    </div>
+    <div class="item">
+        <span>莊園精選咖啡</span>
+        <div class="txt txt3">
+            <h2>深度烘焙</h2>
+            <p>－口感紮實</p>
+        </div>
+        <img src="./pic/coffee-bean_08.png" alt="">
+    </div>
+    <div class="pic">
+        <img src="./pic/Image 22.png" alt="">
+    </div>
+</div>
+
+  
+<section class="bg">
+<div class="bean_title">
+    <h2>烘焙度選擇</h2>
+</div>
+    <div class="markc">
+        <a  id="dry1" onClick="showans1()"><span>極淺焙</span></a>
+        <a  id="dry2" onClick="showans2()"><span>淺焙</span></a>
+        <a  id="dry3" onClick="showans3()"><span>中焙</span></a>
+        <a  id="dry4" onClick="showans4()"><span>中深焙</span></a>
+        <a  id="dry5" onClick="showans5()"><span>深焙</span></a>
+    </div>
+    
+<!-- 第一組 淺碚咖啡 -->
+
+    <div class="container" id="container1">
+        <div class="row">
+        <div class="col-6 col-md-6 col-lg-3">
+            <div class="dry_bean" style="border: none;transform:none;
+            box-shadow:none;">
+                <img src="./pic/dry_bean/bake-circle_1.png" alt="" style="background-color:transparent">
+            </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-3">
+            <a href="./07-1-arabica.html"><div class="dry_bean">
+                <img src="./pic/dry_bean/dry_bean (1).png" alt="">
+                <div class="txt">
+                    <h2>阿拉比卡咖啡豆</h2>
+                    <p>NT600</p>    
+                </div></a>
+                        
+            </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3">
+             <a href="./07-3-mannin.html"><div class="dry_bean">
+                <img src="./pic/dry_bean/dry_bean (4).png" alt="">
+                <div class="txt">
+                    <h2>阿里山咖啡豆</h2>
+                    <p>NT700</p>    
+                </div></a>
+                        
+            </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-3">
+             <a href="./07-2-yiga.html"><div class="dry_bean">
+                <img src="./pic/dry_bean/dry_bean (3).png" alt="">
+                <div class="txt">
+                    <h2>耶加雪夫咖啡豆</h2>
+                    <p>NT500</p>    
+                </div></a>
+                        
+            </div>
+        </div>
+     </div>
+    </div>
+
+    <div class="container"  id="container2"  style="display: none;">
+        <div class="row">
+        <div class="col-6 col-md-6 col-lg-3">
+            <div class="dry_bean" style="border: none;transform:none;
+            box-shadow:none;">
+                <img src="./pic/dry_bean/bake-circle_2.png" alt="" style="background-color:transparent">
+            </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-3">
+            <a href="./07shopitem.html"><div class="dry_bean">
+                <img src="./pic/dry_bean/dry_bean (4).png" alt="">
+                <div class="txt">
+                    <h2>阿里山咖啡豆</h2>
+                    <p>NT600</p>    
+                </div></a>
+                        
+            </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3">
+            <a href="./07shopitem.html"><div class="dry_bean">
+                <img src="./pic/dry_bean/dry  (2).jpg" alt="">
+                <div class="txt">
+                    <h2>佳景莊園咖啡豆</h2>
+                    <p>NT500</p>    
+                </div></a>
+                        
+            </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-3">
+            <a href="./07shopitem.html"><div class="dry_bean">
+                <img src="./pic/dry_bean/dry_bean (1).png" alt="">
+                <div class="txt">
+                    <h2>阿拉比卡咖啡豆</h2>
+                    <p>NT600</p>    
+                </div></a>
+                        
+            </div>
+        </div>
+     </div>
+    </div>
+
+    <div class="container"  id="container3"  style="display: none;">
+        <div class="row">
+        <div class="col-6 col-md-6 col-lg-3">
+            <div class="dry_bean" style="border: none;transform:none;
+            box-shadow:none;">
+                <img src="./pic/dry_bean/bake-circle_3.png" alt="" style="background-color:transparent">
+            </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-3">
+            <a href="./07shopitem.html"><div class="dry_bean">
+                <img src="./pic/dry_bean/dry  (1).jpg" alt="">
+                <div class="txt">
+                    <h2>曼特寧咖啡豆</h2>
+                    <p>NT700</p>    
+                </div></a>
+                        
+            </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3">
+            <a href="./07shopitem.html"><div class="dry_bean">
+                <img src="./pic/dry_bean/dry_bean (4).png" alt="">
+                <div class="txt">
+                    <h2>阿里山咖啡豆</h2>
+                    <p>NT600</p>    
+                </div></a>
+                        
+            </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-3">
+            <a href="./07shopitem.html"><div class="dry_bean">
+                <img src="./pic/dry_bean/dry  (2).jpg" alt="">
+                <div class="txt">
+                    <h2>佳景莊園咖啡豆</h2>
+                    <p>NT500</p>    
+                </div></a>
+                        
+            </div>
+        </div>
+     </div>
+    </div>
+<!-- 第四組咖啡 -->
+    <div class="container"  id="container4"  style="display: none;">
+        <div class="row">
+        <div class="col-6 col-md-6 col-lg-3">
+            <a href="./07shopitem.html"></a><div class="dry_bean" style="border: none;transform:none;
+            box-shadow:none;">
+                <img src="./pic/dry_bean/bake-circle_4.png" alt="" style="background-color:transparent">
+            </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-3">
+            <a href="./07shopitem.html"><div class="dry_bean">
+                <img src="./pic/dry_bean/dry_bean (1).png" alt="">
+                <div class="txt">
+                    <h2>阿拉比卡咖啡豆</h2>
+                    <p>NT600</p>    
+                </div></a>
+                        
+            </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3">
+            <a href="./07shopitem.html"><div class="dry_bean">
+                <img src="./pic/dry_bean/dry_bean (3).png" alt="">
+                <div class="txt">
+                    <h2>耶加雪夫咖啡豆</h2>
+                    <p>NT500</p>    
+                </div></a>
+                        
+            </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-3">
+            <a href="./07shopitem.html"><div class="dry_bean">
+                <img src="./pic/dry_bean/dry  (1).jpg" alt="">
+                <div class="txt">
+                    <h2>曼特寧咖啡豆</h2>
+                    <p>NT700</p>    
+                </div></a>
+                        
+            </div>
+        </div>
+     </div>
+    </div>
+<!-- 第五組咖啡 -->
+    <div class="container"  id="container5" style="display: none;">
+        <div class="row">
+        <div class="col-6 col-md-6 col-lg-3">
+            <div class="dry_bean" style="border: none;transform:none;
+            box-shadow:none;">
+                <img src="./pic/dry_bean/bake-circle_5.png" alt="" style="background-color:transparent">
+            </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-3">
+            <a href="./07shopitem.html"><div class="dry_bean">
+                <img src="./pic/dry_bean/dry  (1).jpg" alt="">
+                <div class="txt">
+                    <h2>曼特寧咖啡豆</h2>
+                    <p>NT700</p>    
+                </div></a>
+                        
+            </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3">
+            <a href="./07shopitem.html"><div class="dry_bean">
+                <img src="./pic/dry_bean/dry_bean (4).png" alt="">
+                <div class="txt">
+                    <h2>阿里山咖啡豆</h2>
+                    <p>NT600</p>    
+                </div></a>
+                        
+            </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-3">
+            <a href="./07shopitem.html"><div class="dry_bean">
+                <img src="./pic/dry_bean/dry  (2).jpg" alt="">
+                <div class="txt">
+                    <h2>佳景莊園咖啡豆</h2>
+                    <p>NT500</p>    
+                </div></a>
+                        
+            </div>
+        </div>
+     </div>
+    </div>
+
+</section>
+
+
+    <!-- ------暢銷咖啡豆----- -->
+
+<section class="coffeee">
+    <div class="bean_title">
+        <h2>暢銷咖啡豆</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+        <div class="col-6 col-md-6 col-lg-3">
+            <a href="./03coffee bean.html"><div class="bean_item bean_item1">
+                <img src="./pic/dry_bean/dry_bean (1).png" alt="">
+                <div class="txt">
+                    <h2>阿拉比卡咖啡豆</h2>
+                    <p>NT600</p>    
+                </div> 
+                <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                </div>             
+            </div></a>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3">
+            <a href="./03coffee bean.html"><div class="bean_item">
+                <img src="./pic/dry_bean/dry_bean (3).png" alt="">
+                <div class="txt">
+                    <h2>耶加雪夫咖啡豆</h2>
+                    <p>NT500</p>    
+                </div>
+                <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                </div> </a>
+            </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3">
+            <a href="./03coffee bean.html"><div class="bean_item bean_item1">
+                <img src="./pic/dry_bean/dry  (2).jpg" alt="">
+                <div class="txt">
+                    <h2>佳景莊園咖啡豆</h2>
+                    <p>NT600</p>    
+                </div>
+                <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                </div> </a>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-3">
+            <a href="./03coffee bean.html"><div class="bean_item">
+                <img src="./pic/dry_bean/dry  (1).jpg" alt="">
+                <div class="txt">
+                    <h2>曼特寧咖啡豆</h2>
+                    <p>NT700</p>    
+                </div>
+                <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                </div>              
+            </div></a>
+        </div>
+      </div>
+    </div>
+</section>
+   <!-- ------咖啡學院------ -->
+
+   <div class="bean_title">
+    <h2>咖啡學院</h2>
+   </div>
+    <div class="container">
+        <div class="row">
+
+        
+        <div class="col-6 col-md-6 col-lg-3">
+            <div class="coffee_item">
+               <img src="./pic/school/coffee-know (1).jpg" alt="">
+                <a href="./05school.html"><div class="txt">
+                     <h2>觀看文章</h2>
+                </div></a>
+            </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3">
+            <div class="coffee_item">
+             <img src="./pic/school/coffee-know (2).jpg" alt="">
+            <a href="./05school.html"> <div class="txt">
+                <h2>觀看文章</h2>
+            </div></a>
+            </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3">
+            <div class="coffee_item">
+             <img src="./pic/school/coffee-know (4).jpg" alt="">
+            <a href="./05school.html"> <div class="txt">
+                <h2>觀看文章</h2>
+            </div></a>
+
+            </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3">
+            <div class="coffee_item">  
+             <img src="./pic/school/coffee-know (4).jpg" alt="">
+            <a href="./05school.html"> <div class="txt">
+                <h2>觀看文章</h2>
+            </div></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="row">
+
+        
+        <div class="col-6 col-md-6 col-lg-3">
+            <div class="coffee_item">
+                <img src="./pic/school/coffee-skill (1).jpg" alt=""><a href="./05school.html">
+                <div class="txt">
+                    <h2>觀看文章</h2>
+                </div></a>
+            </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3">
+            <div class="coffee_item">
+             <img src="./pic/school/coffee-skill (2).jpg" alt=""><a href="./05school.html">
+             <div class="txt">
+                <h2>觀看文章</h2>
+            </div></a>
+            </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3">
+            <div class="coffee_item">
+             <img src="./pic/school/coffee-mv (1).jpg" alt=""><a href="./05school.html">
+             <div class="txt">
+                <h2>觀看影片</h2>
+            </div></a>
+
+            </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3">
+            <div class="coffee_item">  
+             <img src="./pic/school/coffee-mv (2).jpg" alt=""><a href="./05school.html">
+             <div class="txt">
+                <h2>觀看影片</h2>
+            </div></a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+<!-- 頁尾 -->
+
+<div class="main-footer">
+    <div class="container">
+        <div class="footer-item ">
+          <a href="./01index.html"><img src="./圖片/商標.png" alt=""></a>
+          <div>
+          <h2>好時光咖啡豆專賣店</h2>
+          <p>訂購專線：0800-123-123</p>
+          <p>商店地址：台北市和平路110號</p></div>
+        </div> 
+        <div class="footer-item">
+            <h4>商店訊息</h4>
+            <nav>
+                <a href="./02school.html">關於我們</a>
+                <a href="./02brand.html">品牌精神</a>
+                <a href="">聯絡我們</a>
+            
+            </nav>
+        </div>
+        <div class="footer-item">
+            <h4>商品服務</h4>
+            <nav>
+                <a href="./03coffee bean.html">暢銷咖啡豆</a>
+                <a href="./03coffee bean.html">經典咖啡豆</a>
+                <a href="./04equipment.html">熱銷咖啡器材</a>
+            </nav>
+
+        </div>
+        <div class="footer-item">
+            <h4>咖啡學院</h4>
+            <nav>
+                <a href="./05school.html">咖啡小知識</a>
+                <a href="./05school.html">咖啡沖泡技術</a>
+                <a href="./05school.html">咖啡教學影片</a>
+            </nav>
+        </div>
+    </div>
+    <div class="copyright">
+        本網站為緯育TibaMe前端設計工程師班學員專題作品，僅供學習、展示之用。<br>
+        若有侵權疑慮，您可以私訊 TibaMe-前端設計工程師養成班 ，後續會由專人協助處理
+    </div>
+</div>    
+</body>
+<script>
+    function showans1(){
+        document.getElementById("container1").style.display="";
+        document.getElementById("container2").style.display="none";
+        document.getElementById("container3").style.display="none";
+        document.getElementById("container4").style.display="none";
+        document.getElementById("container5").style.display="none";
+    }
+    function showans2(){
+        document.getElementById("container1").style.display="none";
+        document.getElementById("container2").style.display="";
+        document.getElementById("container3").style.display="none";
+        document.getElementById("container4").style.display="none";
+        document.getElementById("container5").style.display="none";
+    }
+    function showans3(){
+        document.getElementById("container1").style.display="none";
+        document.getElementById("container2").style.display="none";
+        document.getElementById("container3").style.display="";
+        document.getElementById("container4").style.display="none";
+        document.getElementById("container5").style.display="none";
+    }
+    function showans4(){
+        document.getElementById("container1").style.display="none";
+        document.getElementById("container2").style.display="none";
+        document.getElementById("container3").style.display="none";
+        document.getElementById("container4").style.display="";
+        document.getElementById("container5").style.display="none";
+    }
+    function showans5(){
+        document.getElementById("container1").style.display="none";
+        document.getElementById("container2").style.display="none";
+        document.getElementById("container3").style.display="none";
+        document.getElementById("container4").style.display="none";
+        document.getElementById("container5").style.display="";
+    }
+    
+    </script> 
+     <script src="./bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js" ></script>
+</html>

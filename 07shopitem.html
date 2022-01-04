@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./goodtime.css">
+    <link rel="stylesheet" href="./shop.css">
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+            background-image: url(./背景圖\ 完成1.png);
+            background-repeat: repeat;
+            background-attachment:scroll;
+            background-position: center;
+            background-size: cover;}
+
+
+
+    </style>
+
+</head>
+<body>
+      <!-- 導覽列 -->
+      <input type="checkbox" id="menu-control">
+
+      <header class="main-header">
+          <!-- logo -->
+          <h1 class="logo">
+              <a href="./01index.html" class="logo">
+                  <img src="./pic/logo.png">
+              </a>
+          </h1>
+          <!-- 漢堡 -->
+          <label class="hb" for="menu-control">
+              <span></span>
+              <span></span>
+              <span></span>
+          </label>
+          <!-- 選單 -->
+          <nav class="main-nav">
+              <a href="./02brand.html" >關於好時光</a>
+              <a href="./03coffee bean.html">精選咖啡豆</a>
+              <a href="./04equipment.html">咖啡器材</a>
+              <a href="./05school.html">咖啡學院</a>
+          
+             </nav>
+      </header>
+      
+
+     <!-- 麵包削 -->
+    <div class="wrap">
+        <ol class="bean-list">
+            <li><a href="./01index.html">首頁</a></li>
+            <li><a href="./03coffee bean.html">咖啡豆專賣區</a></li>
+            <li><a href="#">耶加雪夫咖啡豆</a></li>
+        </ol>
+    </div>
+
+
+
+    <!-- 產品介紹 -->
+    <div class="sale_container">
+        <div class="sale_item">
+            <div class="pic">
+                <img src="./pic/dry_bean/dry_bean (3).png">
+            </div>
+            <div class="txt">
+                <h2>耶加雪夫咖啡豆</h2>
+                <p><span>產區：</span>衣索比亞</p>
+                <p><span>烘培程度：</span>中培</p>             
+                <p><span>計量單位：</span>200G(包)</p>
+                <p><span>價錢：</span>NT 280</p>
+                <div class="sale-bar">
+                    <span>數量：</span>
+                    <button class="minus-btn">-</button>
+                    <input type="txt" value="1">
+                    <button class="plus-btn">+</button>
+                </div>
+                <a class="goshop" href="">立即結帳</a>
+                <a href="">加入購物車</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 觀看更多 -->
+    <div class="bean_title" >
+        <h2 >也許你喜歡這些商品</h2>
+    </div>
+      
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="./07-4-ali.html"><div class="item">
+                    <img src="./pic/dry_bean/dry_bean (1).png" alt="">
+                    <div class="txt">
+                        <h2 >阿里山咖啡豆</h2> 
+                    </div></a>
+                   
+                </div>
+            </div>
+            <div class="col">
+                <a href="./07-1-arabica.html"><div class="item">
+                    <img src="./pic/dry_bean/dry_bean (2).png" alt="">
+                    <div class="txt">
+                        <h2 >阿拉比卡咖啡豆</h2> 
+                    </div></a>
+                </div>
+            </div>
+            <div class="col">
+                <a href="./07-5-grand.html"><div class="item">
+                    <img src="./pic/dry_bean/dry  (2).jpg" alt="">
+                    <div class="txt">
+                        <h2 >佳景莊園咖啡豆</h2> 
+                    </div></a>
+                </div>
+            </div>
+            <div class="col">
+                <a href="./07-3-mannin.html"><div class="item">
+                    <img src="./pic/dry_bean/dry  (1).jpg" alt="">
+                    <div class="txt">
+                        <h2 >曼特寧咖啡豆</h2> 
+                    </div></a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+</body>
+</html>

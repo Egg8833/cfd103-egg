@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./goodtime.css">
+    <title>Document</title>
+
+    <style>
+
+    body{
+        background-image: url(./pic/body-bg.png);
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-position: center;
+    }
+        
+  
+    /* ------輪播圖---- */
+
+    .slider {
+        width: 100%;
+        margin: auto;
+    }
+    .slider_pic img {
+        width: 100%;
+        vertical-align: top;
+    }
+
+    /* <!-- 文章類型選項 --> */
+    .article_wrap {
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        position: relative;
+    }
+    .article_list {
+        width:80%;
+        margin:10px;
+        display: flex;
+        flex-direction: column;
+        border: solid 1px rgb(185, 184, 184);
+        border-radius: 15px;
+    }
+
+    .list_item {
+        display: flex;
+        padding: 20px;
+        color: #3a3204;
+    }
+    
+    .item1{
+       border-top:solid 1px rgb(185, 184, 184);
+    }
+    .item1 input { 
+        margin:0px 20px;
+        border-radius: 5px;
+        border:1px solid #3a3204 ;
+        height: 30px;
+        width: 200px;
+        
+        
+    }
+   
+    .list_item li {
+        list-style: none;
+        text-decoration: none;
+        margin:0px 20px;
+       
+    }
+    .list_item a {
+        list-style: none;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        padding: 0px 15px;
+        color:#3a3204 ;
+    }
+    .list_item span {
+        font-size: 20px;
+        margin:0px 50px;
+       
+    }
+    .list_item span::after {
+        content:'';
+        border-right: grey 1px solid;
+        position: relative;
+        right: -40px;
+    }
+
+  /* 文章排行榜 */
+  
+  .article_top {
+        width: 189px;
+        margin-top: 10px;
+        margin-right: 10px;
+        border: solid 1px rgb(185, 184, 184);
+        border-radius: 15px;
+        position: sticky;
+        top: 20px;
+      
+    }
+    .article_top_wrap{
+        width: 189px;
+        height: 2000px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+      
+    }
+
+   
+    
+    .article_top > h2 {
+        text-align: center;
+    }
+    .top_item{
+        display: flex;
+        margin: 5px 0px;
+        
+       
+    }
+    .top_item1{
+        border-top: solid 1px rgb(185, 184, 184);
+     
+    }
+    .top_item1:last-child {
+        margin-bottom: 5px;
+    }
+    .top_icon{
+        width: 40px;
+        padding-top: 8px;
+    }
+    .top_icon img {
+        width: 100%;
+        vertical-align: top;
+    }
+    .top_text{
+        width: 145px;
+        padding: 0px 5px;
+    }
+    .top_text a {
+        text-decoration: none;
+        color:#3a3204 ;
+        
+    }
+    .top_text :hover {
+        background-color:coral;
+    }
+
+
+    /* <!-- 文章列表 --> */
+    .article {
+       max-width: 1200px;
+       margin: auto;
+       display: flex;
+       
+    }
+    .big_article {
+        width: 80%; 
+        border: solid 1px rgb(185, 184, 184);
+        border-radius: 15px;       
+    }
+    .big_box {
+        width: 20%;
+    }
+    .article_item {
+        max-width: 960px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+       
+    }
+    .article_item_pic {
+        width:360px ;
+    }
+    .article_item_pic img {
+        width: 100%;
+        vertical-align:middle;
+    }
+
+    .article_item_text{
+        width:600px;
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        
+    }
+    .article_item_text h2 {
+        padding-bottom: 15px;
+        
+    }
+    .article_item_text p{
+        padding-left: 12px;
+        color: gray;
+    }
+    .book_title{
+        padding:30px 10px 0px 10px;
+        flex-grow: 1;
+        align-content: center;
+        text-align: justify;
+        overflow: hidden;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 5; /*行數*/
+        -webkit-box-orient: vertical;
+        white-space: normal;
+    }
+    .book_title p {
+        line-height: 25px;
+    }
+    .book_title a{
+        text-decoration: none;
+    }
+    .book_view {
+        padding: 12px ;
+        color: gray;
+        text-align: right;
+    }
+    .article1{
+        border-top: solid 1px rgb(185, 184, 184);
+    }
+
+
+
+    
+    @media screen and (max-width:1024px) {
+        .article_top {
+            display: none;
+        }
+        .article_top_wrap{ 
+            display: none;
+        }  
+        .big_article{
+            margin: 15px;
+        }
+        .book_title{  -webkit-line-clamp: 4;}
+        .article_item_text h2{
+            font-size: 20px;
+        }
+    }
+    
+    @media screen and (max-width:768px) {
+        .list_item li {
+        margin:0px 5px;
+    }
+        .list_item span {
+        font-size: 20px;
+        margin:0px 15px;
+       
+    }
+    .list_item span::after {
+        content:'';
+        right: -20px;
+    }
+    .article_item_text h2{
+            font-size: 18px;
+        }
+        
+    }
+
+
+
+    </style>
+</head>
+<body>
+
+  
+    <!-- 導覽列 -->
+    <input type="checkbox" id="menu-control">
+
+    <header class="main-header">
+        <!-- logo -->
+        <h1 class="logo">
+            <a href="./01index.html" class="logo">
+                <img src="./pic/logo.png">
+            </a>
+        </h1>
+        <!-- 漢堡 -->
+        <label class="hb" for="menu-control">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <!-- 選單 -->
+        <nav class="main-nav">
+            <a href="./02brand.html" >關於好時光</a>
+            <a href="./03coffee bean.html">精選咖啡豆</a>
+            <a href="./04equipment.html">咖啡器材</a>
+            <a href="./05school.html">咖啡學院</a>
+          
+           </nav>
+    </header>
+
+
+<!-- 輪播圖 -->
+
+<div class="slider">
+    <div class="slider_pic">
+        <img src="./圖片/咖啡學院/標題.jpg" alt="咖啡豆大師">
+       
+    </div>
+</div>
+
+
+    <!-- 文章類型選項 -->
+<div class="article_wrap">
+    <div class="article_list">
+        <div class="list_item"> 
+            <span><b>類型</b></span>
+            <li><a href="">全部</a></li>
+            <li><a href="">咖啡小知識</a></li>
+            <li><a href="">沖泡技術</a></li>
+            <li><a href="">咖啡影片</a></li>
+        </button>
+        </div>
+        <div class="list_item  item1"> 
+        <span><b>搜尋</b></span>
+        <input type="text" placeholder=" 文章關鍵字搜尋">
+        </div>
+    </div>
+
+    <div class="article_top_wrap">
+      <div class="article_top">
+        <h2>文章排行</h2>
+        <div class="top_item ">
+            <div class="top_icon">
+              <img src="./圖片/咖啡學院/1.png" alt="">
+            </div>
+            <div class="top_text">
+                <a href=""><p>【沖泡技術】<br> &nbsp;手沖黃金比例</p></a>
+             </div>
+        </div>
+
+        <div class="top_item top_item1">
+            <div class="top_icon">
+              <img src="./圖片/咖啡學院/2.png" alt="">
+            </div>
+            <div class="top_text">
+            <a href=""><p>【咖啡小知識】<br> &nbsp;櫻桃採收</p></a>
+             </div>
+        </div>
+
+        <div class="top_item top_item1">
+            <div class="top_icon">
+              <img src="./圖片/咖啡學院/3.png" alt="">
+            </div>
+            <div class="top_text">
+            <a href=""><p>【咖啡小知識】<br> &nbsp;巴西咖啡的歷史</p></a>
+             </div>
+        </div>
+
+        <div class="top_item top_item1">
+            <div class="top_icon">
+              <img src="./圖片/咖啡學院/4.png" alt="">
+            </div>
+            <div class="top_text">
+                <a href=""><p>【沖泡技術】<br>  &nbsp;基礎手沖</p></a>
+             </div>
+        </div>
+
+      </div>
+    </div>
+</div>
+    
+
+
+    <!-- 文章列表 -->
+
+    <div class="article">
+        <div class="big_article">
+        <div class="article_item">
+            <div class="article_item_pic">
+                <a href=""><img src="./圖片/咖啡學院/咖啡小知識 300X200.jpg" alt=""></a>
+            </div>
+            <div class="article_item_text">
+                <div class="book_title">
+                    <a href=""><h2>【咖啡小知識】咖啡因的故事</h2>
+                    <p>咖啡因得起源是在1820年的時候被一位德國的化學家從咖啡豆裡面發現的，所以被命名成咖啡因(Caffeine)，幾年後也從茶葉裡面發現此種物質，當時被稱為茶因(Teaine)，但是最後全部以咖啡因為命名。或許有些人認為當咖啡烘焙越深的話咖啡因的含量會相對的減少，其實這是一種錯誤的觀念... </p></a>
+                </div>
+                <div class="book_view">
+                <span>發表於2021/10/06 &nbsp;&nbsp;❤10人收藏  &nbsp;&nbsp;☉200人瀏覽
+                </span>
+                </div>
+            </div>  
+        </div> 
+
+        <div class="article_item article1">
+            <div class="article_item_pic">
+                <a href=""><img src="./圖片/咖啡學院/咖啡小知識 巴西.jpg" alt=""></a>
+            </div>
+            <div class="article_item_text">
+                <div class="book_title">
+                    <a href=""><h2>【咖啡小知識】巴西咖啡的特色</h2>
+                    <p>巴西咖啡泛指產於巴西的咖啡。巴西咖啡種類繁多，絕大多數巴西咖啡未經清洗而且是曬乾的，它們根據產地州名和運輸港進行分類。巴西有27個州，17個州出產咖啡，但其中有4個州的產量最大，加起來佔全國總產量的98％。巴西咖啡的口感中帶有較低的酸味，配合咖啡的甘苦味，入口極為滑順，而且又帶有淡淡的青草芳香，在清香略帶苦味，甘滑順口，餘味能令人舒活暢快... </p></a>
+                </div>
+                <div class="book_view">
+                <span>發表於2020/6/06 &nbsp;&nbsp;❤15人收藏  &nbsp;&nbsp;☉340人瀏覽
+                </span>
+                </div>
+            </div>  
+        </div> 
+        <div class="article_item article1">
+            <div class="article_item_pic">
+                <a href=""><img src="./圖片/咖啡學院/咖啡小知識 曼特寧.jpg" alt=""></a>
+            </div>
+            <div class="article_item_text">
+                <div class="book_title">
+                    <a href=""><h2>【咖啡小知識】蘇門答臘－曼特寧</h2>
+                    <p>蘇門答臘的環境土壤，使得種植出的咖啡富有木質調性與醇厚的口感，有著草本藥材、雪松、可可、發酵水果等獨特的風味。 而其中，曼特寧更是印尼咖啡豆中，僅占25%的阿拉比卡咖啡樹種裡，最為經典的咖啡豆。 在品嚐曼特寧的時候，能夠受到在舌尖的潤滑，並帶有淡淡的草本植物芳香、可可的甘甜與水果般的芳香，後韻深長... </p></a>
+                </div>
+                <div class="book_view">
+                <span>發表於2020/3/12 &nbsp;&nbsp;❤5人收藏  &nbsp;&nbsp;☉140人瀏覽
+                </span>
+                </div>
+            </div>  
+        </div>      
+        <div class="article_item article1">
+            <div class="article_item_pic">
+                <a href=""><img src="./圖片/咖啡學院/基礎手沖.jpg" alt=""></a>
+            </div>
+            <div class="article_item_text">
+                <div class="book_title">
+                    <a href=""><h2>【沖泡技術】基礎手沖</h2>
+                    <p>「手沖」是許多咖啡玩家的首選入門方法，手沖咖啡的核心原理是溶解萃取，萃取指的是咖啡中的可溶性物質從固體被溶出到液體的過程。過程中需要考慮到許多變因，包含水粉比、研磨顆細、水溫、手法等，還必須要留意沖煮咖啡的烘焙程度，讓種種因素取得一個平衡.... </p></a>
+                </div>
+                <div class="book_view">
+                <span>發表於2020/1/23 &nbsp;&nbsp;❤50人收藏  &nbsp;&nbsp;☉460人瀏覽
+                </span>
+                </div>
+            </div>  
+        </div>                
+        
+        <div class="article_item article1">
+            <div class="article_item_pic">
+                <a href=""><img src="./圖片/咖啡學院/影片 轟鬥雞介紹.jpg" alt=""></a>
+            </div>
+            <div class="article_item_text">
+                <div class="book_title">
+                    <a href=""><h2>【影片】Fujin變頻烘豆機600G烘豆機基本介紹</h2>
+                    <p>Fujin變頻烘豆機600G烘豆機基本介紹</p></a>
+                </div>
+                <div class="book_view">
+                <span>發表於2020/2/13 &nbsp;&nbsp;❤1人收藏  &nbsp;&nbsp;☉120人瀏覽
+                </span>
+                </div>
+            </div>  
+        </div>        
+
+        <div class="article_item article1">
+            <div class="article_item_pic">
+                <a href=""><img src="./圖片/咖啡學院/咖啡小知識-櫻桃採收.jpg" alt=""></a>
+            </div>
+            <div class="article_item_text">
+                <div class="book_title">
+                    <a href=""><h2>【咖啡小知識】櫻桃採收</h2>
+                    <p>不同國家、不同地區生產的咖啡果採收時間均不相同，通常在花厚約7~8個月等咖啡果成熟呈鮮紅色，稱為「咖啡櫻桃」(coffee cherries)時進行採收，而處理的定義是指脫去咖啡櫻桃的外果皮、除果肉、內果皮、銀皮…等5個部份，最後取得咖啡豆的方式...</p></a>
+                </div>
+                <div class="book_view">
+                <span>發表於2020/3/13 &nbsp;&nbsp;❤11人收藏  &nbsp;&nbsp;☉520人瀏覽
+                </span>
+                </div>
+            </div>  
+        </div>
+        <div class="article_item article1">
+            <div class="article_item_pic">
+                <a href=""><img src="./圖片/咖啡學院/手沖黃金比例.jpg" alt=""></a>
+            </div>
+            <div class="article_item_text">
+                <div class="book_title">
+                    <a href=""><h2>【沖泡技術】手沖黃金比例</h2>
+                    <p>手沖咖啡粉與水的比例，影響的是喝起來的「濃度」。例如用20克咖啡粉、以300克水來沖煮，粉水比是1:15。有肯定好喝的黃金比例嗎？其實沒有一定的標準，因為每個人喜愛的咖啡濃度不同，適合自己的濃度，就是自己的黃金比例。而比較多人在用的粉水比是1:15...</p></a>
+                </div>
+                <div class="book_view">
+                <span>發表於2019/12/3 &nbsp;&nbsp;❤61人收藏  &nbsp;&nbsp;☉720人瀏覽
+                </span>
+                </div>
+            </div>  
+        </div>       
+        <div class="article_item article1" >
+            <div class="article_item_pic"  >
+                <a href=""><img src="./圖片/咖啡學院/試烘影片.jpg" alt=""></a>
+            </div>
+            <div class="article_item_text">
+                <div class="book_title" ">
+                    <a href=""><h2>【影片】烘豆機操作示範</h2>
+                    <p>詢問許多關於 BeanBon 的操作細節。為了讓更多 Bean 友能更清楚地認識 BeanBon 家用咖啡烘豆機的特點，我們特地邀請兩屆 WCRC 台灣烘豆冠軍，同時也是 2019 世界盃烘豆大賽前 8 強的華明璿老師替我們示範說明，一起來看看 BeanBon 有著哪些設計巧思吧！</p></a>
+                </div>
+                <div class="book_view">
+                <span>發表於2019/11/30 &nbsp;&nbsp;❤3人收藏  &nbsp;&nbsp;☉120人瀏覽
+                </span>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <div class="big_box"></div>         
+    </div>
+  
+    
+
+    <!-- 頁尾 -->
+
+    <div class="main-footer">
+        <div class="container">
+            <div class="footer-item">
+              <a href="./01index.html"><img src="./圖片/商標.png" alt=""></a>
+              <h2>好時光咖啡豆專賣店</h2>
+              <p>訂購專線：0800-123-123</p>
+              <p>商店地址：台北市和平路110號</p>
+            </div> 
+            <div class="footer-item">
+                <h4>商店訊息</h4>
+                <nav>
+                    <a href="./02school.html">關於我們</a>
+                    <a href="./02brand.html">品牌精神</a>
+                    <a href="">聯絡我們</a>
+                
+                </nav>
+            </div>
+            <div class="footer-item">
+                <h4>商品服務</h4>
+                <nav>
+                    <a href="./03coffee bean.html">暢銷咖啡豆</a>
+                    <a href="./03coffee bean.html">經典咖啡豆</a>
+                    <a href="./04equipment.html">熱銷咖啡器材</a>
+                </nav>
+    
+            </div>
+            <div class="footer-item">
+                <h4>咖啡學院</h4>
+                <nav>
+                    <a href="./05school.html">咖啡小知識</a>
+                    <a href="./05school.html">咖啡沖泡技術</a>
+                    <a href="./05school.html">咖啡教學影片</a>
+                </nav>
+            </div>
+        </div>
+        <div class="copyright">
+            本網站為緯育TibaMe前端設計工程師班學員專題作品，僅供學習、展示之用。<br>
+            若有侵權疑慮，您可以私訊 TibaMe-前端設計工程師養成班 ，後續會由專人協助處理
+        </div>
+    </div>    
+</body>
+</html>

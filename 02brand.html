@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./goodtime.css">
+    <style>
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
+  
+    /* ------輪播圖---- */
+
+    .slider {
+        width: 1200px;
+        margin: auto;
+    }
+    .slider_pic img {
+        width: 100%;
+        vertical-align: top;
+    }
+
+      
+  /* ----品牌精神------- */
+.faith {
+     width: 100%;
+     margin: auto;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-end;
+     background-image: url(./pic/faith/coffee-cup-with-strong-espresso-with-foam-coffee-pot-coffee-beans-bowl.jpg);
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+     
+ }
+ .faith_item {
+     width: 400px;
+     padding-right: 50px;
+     padding-bottom: 30px;
+     text-align: justify;
+     position: relative; 
+     padding-left: 20px;
+ }
+    .item1{     
+        animation: cross 3s ease-in forwards ;
+    }
+    .item2{     
+        animation: cross2 3s ease-in forwards ;
+    } 
+    .item3{     
+        animation: cross3 3s ease-in forwards ;
+    }
+ .faith_item p{font-size: 18px;}
+
+ .faith_item h3{
+     padding-top: 10px;
+     font-size: 30px;
+     color: #8f360e;
+     font-family: "Noto Sans TC", sans-serif;
+ }
+
+     @keyframes cross { from {  right: 0px; opacity:0;  }to { right : 150px ; opacity: 1; } }
+     @keyframes cross2 { from {  right: 0px; opacity:0;  }to { right : 100px ; opacity: 1; } }
+     @keyframes cross3 { from {  right: 0px; opacity:0;  }to { right : 20px ; opacity: 1; } }
+
+ 
+
+
+     
+    /* 咖啡師傅介紹 */
+    .int-container {
+        max-width: 1200px;
+        display: flex;
+       
+        flex-wrap: wrap;
+        margin: 50px auto;
+    }
+    .item {
+        width: 30.666667%;
+        margin: 1.25%;
+        flex-grow: 1;
+        text-align: center;
+        border: solid 1px gray;
+        transform: translateY(0px);
+        transition: 0.5s;
+    }
+    .item img {
+        width: 100%;
+        vertical-align: bottom;
+    }
+    .item h2 {
+        border-bottom:  1px solid #888;
+        padding-bottom: 0.3em;
+        margin-bottom: 0.3em;
+        transition: 0.25s;
+        color: #8f360e;
+    }
+    .item h3 {
+        color: #8f360e;
+        transition: 0.25s;
+    }
+    .item span {
+        line-height: 1.6;
+        transition: 0.25s;
+    }
+    .item .txt {
+        padding: 1.6666667%;
+        position: relative;
+    }
+    .item:last-child{
+        display: none;
+     }
+    
+
+    .item:hover {
+     transform: translateY(-20px);   
+    }
+    .item:hover .txt{
+        background-image:linear-gradient(0deg,#fB8076,#fEB85d);
+    }
+    .item:hover .txt::after{
+        border-left: 184px solid #fEB85d;
+        border-right: 184px solid #fEB85d;
+    }
+    .item:hover h2{
+        color: #fff;
+        border-bottom-color:#fff ;
+    }
+    .item:hover h3{
+        color: #fff;
+        border-bottom-color:#fff ;
+    }
+    .item:hover span{
+        color:#fff;
+    }
+
+
+    
+@media screen and (max-width:1024px){
+    .faith_item {
+     width: 300px;}
+     .item:last-child{
+        visibility: hidden;
+        display: unset;
+     }
+    
+}
+
+ @media screen and (max-width:768px){
+    .faith_item {
+     width: 200px;
+     margin-left: 20px;
+     padding-right: 10px;
+     padding-bottom: 5px;}
+    .item1,.item2,.item3 {
+    animation: none;}
+    
+    .faith_item p{
+        font-size: 12px;
+        margin-left: 20px;
+    }
+
+    .faith_item h3{
+     margin-left: 20px;
+     padding-top: 5px;
+     margin-bottom: 10px;
+     font-size: 15px;}
+
+     .item:last-child{
+        visibility: hidden;
+        display: unset;
+     }
+    }
+
+      
+
+
+    </style>
+</head>
+<body>
+    <!-- 導覽列 -->
+    <input type="checkbox" id="menu-control">
+
+    <header class="main-header">
+        <!-- logo -->
+        <h1 class="logo">
+            <a href="./01index.html" class="logo">
+                <img src="./pic/logo.png">
+            </a>
+        </h1>
+        <!-- 漢堡 -->
+        <label class="hb" for="menu-control">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <!-- 選單 -->
+        <nav class="main-nav">
+            <a href="./02brand.html" style="color:#8f360e;">關於好時光</a>
+            <a href="./03coffee bean.html">精選咖啡豆</a>
+            <a href="./04equipment.html">咖啡器材</a>
+            <a href="./05school.html">咖啡學院</a>
+   
+           </nav>
+    </header>
+
+
+    <!-- -----精神理念  -->
+     <div class="faith">
+        <div class="faith_item item1">
+                <h3>專業烘焙手法</h3>
+                <p>本店的咖啡師傅擁有國際的烘焙認證及多年烘焙手法，以獨特的直火式烘焙加上科學化的數據，提供不同以往的咖啡風格。</p>
+        </div>
+        <div class="faith_item item2">
+               <h3>精心挑選</h3>
+               <p >每批採購的生豆有專業杯測師把關，達到我們的品質標準才進行購買，每一粒咖啡豆皆是精挑細選,給顧客最新鮮的咖啡豆。</p>
+       </div>
+       <div class="faith_item item3">
+           <h3>高品質</h3>
+           <p>每個細節用心嚴格控管，首席烘焙師以高超的技術少量精烘，確保每顆咖啡豆的品質，絕對堅持給顧客最新鮮的咖啡豆。
+           </p>
+       </div> 
+   </div>
+
+
+<!-- <div class="bean_title">
+    <h2>好時光烘焙師傅</h2>
+</div> -->
+
+<div class="int">
+<div class="int-container">
+     <div class="item">
+        <img src="./圖片/coffee marster1.jpg">
+        <div class="txt">
+            <h2>陳義傑 </h2>
+            <h3>專業認證與獲獎 </h3>
+            <span>歐洲精品咖啡協會 烘焙三級認證</span> <br>
+            <span>歐洲精品咖啡協會萃取與研磨三級認證<span><br>
+            <span>在2019年學界咖啡比賽冠軍教練</span><br>
+            <span>在2018年杯測師大賽香港區八强</span><br>
+            <h2></h2>
+            <span>致力於烘焙出最好的咖咖啡豆而不斷嘗試和努力，至歐洲精品咖啡協會學習，培養烘焙咖啡豆能力，回台後創立好時光咖啡豆專賣店，推廣咖啡豆好品質而不斷努力，培養眾多人有品味的焙咖啡豆能力，希望有更多的人懂得咖啡豆的美好。<span>
+        </div>
+    </div> 
+     <div class="item">
+        <img src="./圖片/coffee master3.jpg">
+        <div class="txt">   
+        <h2>Jocky </h2>
+        <h3>專業認證與獲獎 </h3>
+        <span>美國精品咖啡協會國際咖啡品質鑑定師</span> <br>
+        <span>在2019年學界咖啡比賽冠軍教練</span><br>
+        <span>在2018年杯測師大賽香港區八强</span><br>
+        <span>國際咖啡調配師及課程內部評審員</span>
+        <h2></h2>
+        <span>Jocky於2019來本店擔任本店的烘焙師傅，擁有國際比賽經驗且有豐富的烘焙技術，也是本店重要的烘焙人員之一，多年的烘焙經驗，堅持烘焙出最好的咖啡豆而不斷努力，也讓本店的咖啡豆品質向來保持穩定。<span>
+        </div>
+    </div> 
+    <div class="item">
+        <img src="./圖片/coffee marster2.jpg">
+        <div class="txt">
+        <h2>王貞治</h2>
+        <h3>專業認證與獲獎 </h3>
+        <span>美國精品咖啡協會國際咖啡品質鑑定師</span> <br>
+        <span>歐洲精品咖啡協會 生豆三級認證</span><br>
+        <span>在2018年杯測師大賽香港區八强</span><br>
+        <span>國際咖啡調配師及課程內部評審員</span>
+        
+        <h2></h2>
+        <span>從小就熱愛喝咖啡，從而專研咖啡，到美國、歐洲各國學習烘焙技術與咖啡知識，也是本店出色的烘焙師傅，擁有完美主義，堅持烘焙出最好的咖啡豆而不斷努力，也讓本店的咖啡豆品質向來保持穩定。<span>
+        </div>
+    </div>
+    <div class="item" >
+        <img src="./圖片/coffee marster2.jpg">
+        <div class="txt">
+        <h2>王貞治</h2>
+        <h3>專業認證與獲獎 </h3>
+        <span>美國精品咖啡協會國際咖啡品質鑑定師</span> <br>
+        <span>歐洲精品咖啡協會 生豆三級認證</span><br>
+        <span>在2018年杯測師大賽香港區八强</span><br>
+        <span>國際咖啡調配師及課程內部評審員</span>
+        
+        <h2></h2>
+        <span>從小就熱愛喝咖啡，從而專研咖啡，到美國、歐洲各國學習烘焙技術與咖啡知識，也是本店出色的烘焙師傅，擁有完美主義，堅持烘焙出最好的咖啡豆而不斷努力，也讓本店的咖啡豆品質向來保持穩定。<span>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+<!-- 頁尾 -->
+
+<div class="main-footer">
+    <div class="container">
+        <div class="footer-item">
+          <a href="./01index.html"><img src="./圖片/商標.png" alt=""></a>
+          <div>
+          <h2>好時光咖啡豆專賣店</h2>
+          <p>訂購專線：0800-123-123</p>
+          <p>商店地址：台北市和平路110號</p></div>
+        </div> 
+        <div class="footer-item">
+            <h4>商店訊息</h4>
+            <nav>
+                <a href="./02school.html">關於我們</a>
+                <a href="./02brand.html">品牌精神</a>
+                <a href="">聯絡我們</a>
+            
+            </nav>
+        </div>
+        <div class="footer-item">
+            <h4>商品服務</h4>
+            <nav>
+                <a href="./03coffee bean.html">暢銷咖啡豆</a>
+                <a href="./03coffee bean.html">經典咖啡豆</a>
+                <a href="./04equipment.html">熱銷咖啡器材</a>
+            </nav>
+
+        </div>
+        <div class="footer-item">
+            <h4>咖啡學院</h4>
+            <nav>
+                <a href="./05school.html">咖啡小知識</a>
+                <a href="./05school.html">咖啡沖泡技術</a>
+                <a href="./05school.html">咖啡教學影片</a>
+            </nav>
+        </div>
+    </div>
+    <div class="copyright">
+        本網站為緯育TibaMe前端設計工程師班學員專題作品，僅供學習、展示之用。<br>
+        若有侵權疑慮，您可以私訊 TibaMe-前端設計工程師養成班 ，後續會由專人協助處理
+    </div>
+</div>    
+
+</body>
+</html>

@@ -1,0 +1,258 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+/* 大標題 */
+
+.bean_title {
+  max-width: 100%;
+  margin: 50px auto;
+}
+.bean_title h2 {
+  width: 100%;
+  margin-bottom: 20px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 45px;
+  font-weight: 500;
+  color: rgb(88, 37, 37);
+  display: flex;
+  justify-content: center;
+}
+.bean_title h2::after,
+.bean_title h2::before {
+  content: "";
+  display: block;
+  width: 4em;
+  height: 3px;
+  flex-grow: 1;
+  background-color: #aaa;
+  margin: auto;
+}
+.bean_title h2::before {
+  margin-right: 0.5em;
+}
+.bean_title h2::after {
+  margin-left: 0.5em;
+}
+@media screen and (max-width: 768px) {
+  .bean_title h2 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .bean_title h2 {
+    font-size: 20px;
+  }
+}
+
+/* -----------導覽列----------- */
+
+.main-header {
+  display: flex;
+  position: relative;
+  background-image: linear-gradient(0deg, #fb8076, #feb85d);
+  align-items: center;
+  justify-content: start;
+  padding: 4px 10px;
+}
+.logo img {
+  vertical-align: top;
+}
+.main-header .main-nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 1em;
+  position: relative;
+  font-size: 30px;
+  font-family: "Noto Sans TC", sans-serif;
+  transform: translateY(0px);
+  transition: 0.3s;
+}
+.main-header .main-nav a:hover {
+  transform: translateY(-10px);
+}
+.main-header .main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: -5px;
+  height: 0;
+  border-bottom: 1px solid #fff;
+  transition: 0.3s;
+}
+.main-header .main-nav a:hover:after {
+  left: 0;
+  right: 0;
+}
+#menu-control {
+  display: none;
+}
+
+/* ==============手機 */
+@media screen and (max-width: 768px) {
+  .main-header {
+    justify-content: space-between;
+  }
+  .main-nav a {
+    display: block;
+  }
+  .hb {
+    width: 40px;
+    height: 40px;
+    background-color: #f3dd16;
+    position: relative;
+  }
+  .hb span {
+    width: 32px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    transition: top 0.5s 0.2s, bottom 0.5s 0.2s, opacity 0.5s, transform 0.2s;
+  }
+  .hb span:first-child {
+    transform: rotate(0deg);
+    top: 10px;
+  }
+  .hb span:last-child {
+    transform: rotate(0deg);
+    bottom: 10px;
+  }
+  .hb span:nth-child(2) {
+    transform: rotate(0deg);
+    top: 0;
+    bottom: 0;
+  }
+  #menu-control:checked ~ .main-header .hb span:first-child {
+    top: 19px;
+    transform: rotate(225deg);
+    transition: top 0.5s, bottom 0.5s, opacity 0.5s, transform 0.2s 0.5s;
+  }
+  #menu-control:checked ~ .main-header .hb span:last-child {
+    bottom: 19px;
+    transform: rotate(-225deg);
+    transition: top 0.5s, bottom 0.5s, opacity 0.5s, transform 0.2s 0.5s;
+  }
+  .hb span:nth-child(2) {
+    opacity: 1;
+  }
+  #menu-control:checked ~ .main-header .hb span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .main-nav {
+    position: absolute;
+    background-color: #faa;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 50px);
+    transition: left 1s;
+    z-index: 3;
+  }
+  #menu-control:checked ~ .main-header .main-nav {
+    left: 0;
+  }
+}
+/* ==============桌機 */
+@media screen and (min-width: 1025px) {
+  .hb {
+    display: none;
+  }
+  .main-nav {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: auto;
+    height: auto;
+  }
+  .main-nav a {
+    display: inline-block;
+  }
+}
+
+/* ---------頁尾--------- */
+.main-footer {
+  padding: 50px 0px 0px 0px;
+  background: #eac80c;
+}
+.main-footer .container {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+}
+.footer-item {
+  width: 0;
+  flex-grow: 1;
+  margin: 0 20px;
+}
+.footer-item h4 {
+  font-size: 40px;
+  color: rgb(88, 37, 37);
+  border-bottom: 1px dotted #fff;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+}
+.footer-item nav {
+  display: flex;
+  flex-direction: column;
+}
+.footer-item nav a {
+  color: rgb(88, 37, 37);
+  line-height: 2;
+  text-decoration: none;
+  padding: 5px 0px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 25px;
+}
+.footer-item nav a:hover {
+  color: antiquewhite;
+}
+.footer-item h2 {
+  padding: 20px 0px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(88, 37, 37);
+}
+.footer-item p {
+  padding: 10px 0px;
+  color: rgb(88, 37, 37);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 18px;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  margin: 25px 0px 0px;
+  padding: 10px 0px;
+  background-color: #f7984b;
+  color: #edeff1;
+}
+
+/* //手機版本 */
+@media screen and (max-width: 768px) {
+  .footer-item {
+    display: none;
+  }
+  .footer-item h2 {
+    font-size: 18px;
+    padding: 10px 0px;
+  }
+  .footer-item p {
+    font-size: 12px;
+  }
+  .footer-item img {
+    padding-top: 30px;
+    padding-right: 15px;
+  }
+  .footer-item:nth-child(1) {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}

@@ -1,0 +1,233 @@
+/* ===============麵包屑 */
+.wrap {
+  width: 100%;
+  padding: 10px 0px;
+  margin: auto;
+  background: #feb85d;
+}
+
+.bean-list {
+  width: 90%;
+  text-align: center;
+  display: flex;
+  justify-content: start;
+  padding-left: 10%;
+}
+.bean-list li {
+  list-style: none;
+  padding: 0 10px;
+}
+.bean-list li + li {
+  padding-left: 0px;
+}
+.bean-list li + li::before {
+  content: ">";
+  color: #fff;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.bean-list a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ===============商品介紹 */
+.sale_container {
+  max-width: 1000px;
+  margin: auto;
+}
+.sale_item {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.sale_item .pic {
+  width: 40%;
+  display: flex;
+  margin: 10px;
+}
+.pic img {
+  width: 100%;
+  margin: auto;
+  padding: 10px 0px;
+  border-right: 1px solid gray;
+}
+.sale_item .txt {
+  width: 60%;
+  margin-left: 50px;
+}
+.sale_item .txt h2 {
+  font-size: 35px;
+  padding: 15px 0px;
+  color: rgb(88, 37, 37);
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+}
+.sale_item .txt p {
+  font-size: 25px;
+  line-height: 20px;
+  padding: 10px 0px;
+}
+.sale_item .txt p > span {
+  color: rgb(88, 37, 37);
+}
+
+.sale {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.sale-bar span {
+  font-size: 25px;
+  color: rgb(88, 37, 37);
+  margin-right: 20px;
+}
+
+.sale-bar {
+  display: flex;
+  align-items: center;
+}
+
+.sale-bar button {
+  font-size: 24px;
+  padding: 0 15px;
+  border: none;
+  vertical-align: middle;
+  background-color: #feb85d;
+  color: white;
+  cursor: pointer;
+}
+
+.sale-bar button:hover {
+  background-color: rgb(101, 80, 70);
+  color: white;
+}
+
+button.minus-btn {
+  border-radius: 8px 0 0 8px;
+}
+
+button.plus-btn {
+  border-radius: 0 8px 8px 0;
+}
+
+.sale-bar input {
+  width: 60px;
+  text-align: center;
+  font-size: 24px;
+  border: none;
+  background-color: rgb(240, 235, 234);
+  color: rgb(101, 80, 70);
+  outline: none;
+}
+
+.sale_item .txt a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px 10px;
+  border: 1px solid gray;
+  margin-top: 35px;
+}
+
+.goshop {
+  margin-right: 10px;
+  background-color: burlywood;
+}
+
+/* ============更多商品介紹 */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.row {
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.col {
+  padding: 0px 15px;
+  width: 0px;
+  flex-grow: 1;
+}
+.col a {
+  text-decoration: none;
+}
+.item {
+  text-align: center;
+  border: 1px solid gray;
+  margin-bottom: 10px;
+}
+.item:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.item:hover img {
+  background-color: rgb(167, 154, 154);
+}
+
+.item img {
+  width: 100%;
+  vertical-align: top;
+  background-color: white;
+}
+.item .txt {
+  background-color: #dbcec8;
+}
+.item .txt h2 {
+  font-size: 25px;
+  color: #8f360e;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .sale_item .txt {
+    margin-left: 30px;
+  }
+  .item .txt h2 {
+    font-size: 20px;
+  }
+  .sale_item .txt h2 {
+    font-size: 30px;
+    padding: 12px 0px;
+  }
+  .sale_item .txt p {
+    font-size: 20px;
+    line-height: 12px;
+    padding: 10px 0px;
+  }
+  .sale-bar span {
+    font-size: 20px;
+    margin-right: 12px;
+  }
+  .sale-bar button {
+    font-size: 20px;
+  }
+  .sale-bar input {
+    font-size: 20px;
+  }
+  .sale_item .pic {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sale_item .txt h2 {
+    font-size: 20px;
+  }
+  .item .txt h2 {
+    font-size: 12px;
+  }
+  .bean_title h2 {
+    font-size: 20px;
+  }
+  .sale_item .txt p {
+    font-size: 18px;
+    line-height: 10px;
+  }
+  .sale-bar span {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./goodtime.css">
+    <link rel="stylesheet" href="./greid2.css">
+    <title>Document</title>
+
+    <style>
+    
+    body{
+        background-image: url(./pic/body-bg.png);
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-position: center;
+    }
+
+    /* ------輪播圖---- */
+
+    .slider {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .slider_pic img {
+        width: 100%;
+        vertical-align: top;
+    }
+
+      /* 咖啡器材清單 */
+        
+    .bean_item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #dbcec8;
+            border: rosybrown 1px solid;
+
+        }
+    .bean_item_title {
+        position: absolute;
+        text-align: center;
+        margin:auto;
+        padding:50px;
+        background-color: #dbcec8;
+        border: rosybrown 1px solid;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        left: 0;
+        right: 0;
+      
+    }
+
+    .bean_item_title h2 {
+        color:#8f360e;
+    }
+    .bean_item_title li,a {
+            text-decoration: none;
+            list-style: none;
+        }
+    .bean_item_title li{
+            padding: 15px 0px;
+        }
+    .bean_item_title a {
+            font-size: 20px;
+            color:#3a3204;
+            padding: 0px 5px;
+        }
+    .bean_item_title a:hover{
+        color:#551e04;
+    }
+
+
+    .bean_item:hover {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+    .bean_item:hover img {
+        background-color: rgb(167, 154, 154);}
+    .bean_item img {
+            background-color: white;
+            vertical-align: top;
+            width: 100%;
+        }
+    .bean_item .text {
+            background-color: #dbcec8;
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+    .bean_item h3 {
+            font-size: 20px;
+            padding: 15px 15px;
+            color:#8f360e;
+            text-align: center;
+            }
+            
+    .bean_item .text span {
+            font-size: 25px;
+            padding-bottom: 8px;
+            color: rgb(255,0,0,.8);
+        }
+    .bean_item .text span:nth-child(1){
+        text-decoration:line-through;
+        color: black;
+    }
+    .btn {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    .btn > button {
+            padding: 10px;
+            line-height: 15px;
+            cursor: pointer;
+        }
+       
+    .goshop {
+            font-size: 18px;
+            height: 40px;
+            padding: 0px 10px;
+            margin-bottom: 10px;  
+            width:120px;
+
+        }
+    .col-6:nth-child(5),
+    .col-6:nth-child(9){
+        visibility:hidden;
+    }
+    
+    @media screen and (max-width:1200px) {
+    .bean_item_title {
+        padding:15px;}
+    .col-6:nth-child(5),  
+    .col-6:nth-child(9){
+        visibility:unset;}  
+    }
+
+    @media screen and (max-width:768px) {   .bean_item h3 {
+            font-size: 18px;}   
+        .bean_item .text span {
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width:500px) {
+        .goshop {
+            font-size: 10px;} 
+        .bean_item h3 {
+            font-size: 15px;}
+
+        .bean_item .text span {
+            font-size: 15px;
+        }
+        .bean_item_title li{
+            padding: 10px 0px;
+            margin-bottom: 5px;
+        }
+        .bean_item_title h2{
+            font-size: 20px;
+        }
+        .bean_item_title a{
+            font-size: 16px;
+        }
+    }     
+
+        
+
+    </style>
+    <!-- 導覽列 -->
+    <input type="checkbox" id="menu-control">
+
+    <header class="main-header">
+        <!-- logo -->
+        <h1 class="logo">
+            <a href="./01index.html" class="logo">
+                <img src="./pic/logo.png">
+            </a>
+        </h1>
+        <!-- 漢堡 -->
+        <label class="hb" for="menu-control">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <!-- 選單 -->
+        <nav class="main-nav">
+            <a href="./02brand.html" >關於好時光</a>
+            <a href="./03coffee bean.html">精選咖啡豆</a>
+            <a href="./04equipment.html"  style="color:#8f360e;">咖啡器材</a>
+            <a href="./05school.html">咖啡學院</a>
+  
+           </nav>
+    </header>
+
+
+    <div class="slider">
+        <div class="slider_pic">
+            <img src="./圖片/咖啡器材.jpg">   
+        </div>
+    </div>
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 col-md-4 col-lg-3  ">
+            <div class="bean_item" style="border: none;background-color: transparent;" >
+                <div class="bean_item_title">
+                <h2>咖啡器材項目</h2>
+                <li><a href="">磨豆機</a></li>
+                <li><a href="">手沖壺/玻璃壺</a></li>
+                <li><a href="">濾器/濾杯</a></li>
+                <li><a href="">咖啡杯</a></li>
+                <li><a href="">咖啡配件區</a></li>
+            </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3"> 
+                <div class="bean_item">
+                    <img src="./圖片/新增資料夾/磨豆機1.jpg" alt="">
+                    <h3>智慧錐刀磨豆機</h3>
+                    <div class="text">
+                        <span>NT8500</span>
+                        <span>NT760</span> 
+
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3"> 
+                <div class="bean_item">
+                    <img src="./圖片/新增資料夾/ai62.4ur.jpg" alt=""> 
+                    <h3>Minos手搖磨豆機</h3>
+                    <div class="text">
+                        <span>NT3500</span>
+                        <span>NT2700</span> 
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3" > 
+                <div class="bean_item">
+                    <img src="./圖片/新增資料夾/濾杯.jpg" alt="">
+                    <h3>手沖咖啡陶瓷濾杯</h3>
+                    <div class="text">
+                        <span>NT1300</span>
+                        <span>NT1160</span> 
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" > 
+                <div class="bean_item">
+                    <img src="./圖片/新增資料夾/磨豆機1.jpg" alt="">
+                    <h3>智慧錐刀磨豆機</h3>
+                    <div class="text">
+                        <span>NT8500</span>
+                        <span>NT760</span> 
+
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3"> 
+                <div class="bean_item">
+                    <img src="./圖片/新增資料夾/ai62.4ur.jpg" alt=""> 
+                    <h3>Minos手搖磨豆機</h3>
+                    <div class="text">
+                        <span>NT3500</span>
+                        <span>NT2700</span> 
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+             </div>
+             <div class="col-6 col-md-4 col-lg-3"> 
+                <div class="bean_item">
+                    <img src="./圖片/新增資料夾/磨豆機1.jpg" alt="">
+                    <h3>智慧錐刀磨豆機</h3>
+                    <div class="text">
+                        <span>NT8500</span>
+                        <span>NT760</span> 
+
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3"> 
+                <div class="bean_item">
+                    <img src="./圖片/新增資料夾/ai62.4ur.jpg" alt=""> 
+                    <h3>Minos手搖磨豆機</h3>
+                    <div class="text">
+                        <span>NT3500</span>
+                        <span>NT2700</span> 
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+             </div>
+             <div class="col-6 col-md-4 col-lg-3"> 
+                <div class="bean_item">
+                    <img src="./圖片/新增資料夾/磨豆機1.jpg" alt="">
+                    <h3>智慧錐刀磨豆機</h3>
+                    <div class="text">
+                        <span>NT8500</span>
+                        <span>NT760</span> 
+
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3"> 
+                <div class="bean_item">
+                    <img src="./圖片/新增資料夾/ai62.4ur.jpg" alt=""> 
+                    <h3>Minos手搖磨豆機</h3>
+                    <div class="text">
+                        <span>NT3500</span>
+                        <span>NT2700</span> 
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+             </div>
+             <div class="col-6 col-md-4 col-lg-3"> 
+                <div class="bean_item">
+                    <img src="./圖片/新增資料夾/磨豆機1.jpg" alt="">
+                    <h3>智慧錐刀磨豆機</h3>
+                    <div class="text">
+                        <span>NT8500</span>
+                        <span>NT760</span> 
+
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3"> 
+                <div class="bean_item">
+                    <img src="./圖片/新增資料夾/ai62.4ur.jpg" alt=""> 
+                    <h3>Minos手搖磨豆機</h3>
+                    <div class="text">
+                        <span>NT3500</span>
+                        <span>NT2700</span> 
+                    </div>
+                    <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                    </div>
+                </div>
+             </div>         
+    </div>
+</div>
+
+
+
+     
+
+
+
+ 
+<!-- 頁尾 -->
+
+<div class="main-footer">
+    <div class="container">
+        <div class="footer-item">
+          <a href="./01index.html"><img src="./圖片/商標.png" alt=""></a>
+          <div>
+          <h2>好時光咖啡豆專賣店</h2>
+          <p>訂購專線：0800-123-123</p>
+          <p>商店地址：台北市和平路110號</p></div>
+        </div> 
+        <div class="footer-item">
+            <h4>商店訊息</h4>
+            <nav>
+                <a href="./02school.html">關於我們</a>
+                <a href="./02brand.html">品牌精神</a>
+                <a href="">聯絡我們</a>
+            
+            </nav>
+        </div>
+        <div class="footer-item">
+            <h4>商品服務</h4>
+            <nav>
+                <a href="./03coffee bean.html">暢銷咖啡豆</a>
+                <a href="./03coffee bean.html">經典咖啡豆</a>
+                <a href="./04equipment.html">熱銷咖啡器材</a>
+            </nav>
+
+        </div>
+        <div class="footer-item">
+            <h4>咖啡學院</h4>
+            <nav>
+                <a href="./05school.html">咖啡小知識</a>
+                <a href="./05school.html">咖啡沖泡技術</a>
+                <a href="./05school.html">咖啡教學影片</a>
+            </nav>
+        </div>
+    </div>
+    <div class="copyright">
+        本網站為緯育TibaMe前端設計工程師班學員專題作品，僅供學習、展示之用。<br>
+        若有侵權疑慮，您可以私訊 TibaMe-前端設計工程師養成班 ，後續會由專人協助處理
+    </div>
+</div>    
+</body>
+</html>
