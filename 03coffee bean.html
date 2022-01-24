@@ -147,6 +147,8 @@
             padding: 10px;
             line-height: 15px;
             cursor: pointer;
+            border-radius: 10px;
+            background-color: rgba(245, 212, 163, 0.8);
         }
        
     .goshop {
@@ -157,7 +159,7 @@
             width:120px;
 
         }
- 
+    
   
         
     @media screen and (max-width:768px) {   .bean_item h2 {
@@ -180,7 +182,12 @@
             font-size: 18px;
         }
     }
+
+    .active{
+        display: none;
+    }
  
+   
  
 
 
@@ -230,20 +237,20 @@
     <div class="article_list">
         <div class="list_item item2 "> 
             <span><b>產區</b></span>
-            <li><a href="">全部</a></li>
-            <li><a href="">北美洲</a></li>
-            <li><a href="">南美洲</a></li>
-            <li><a href="">非洲</a></li>
-            <li><a href="">亞洲</a></li>
+            <li><a data-con="1" href="javascript:void(0);">全部</a></li>
+            <li><a data-con="2" href="javascript:void(0);">北美洲</a></li>
+            <li><a data-con="3" href="javascript:void(0);">南美洲</a></li>
+            <li><a data-con="4" href="javascript:void(0);">非洲</a></li>
+            <li><a data-con="5" href="javascript:void(0);">亞洲</a></li>
         
         </div>
         <div class="list_item  item1"> 
             <span><b>烘焙</b></span>
-            <li><a href="">極淺烘焙</a></li>
-            <li><a href="">淺烘焙</a></li>
-            <li><a href="">中烘焙</a></li>
-            <li><a href="">中深烘培</a></li>
-            <li><a href="">深烘培</a></li>
+            <li ><a  data-num="1" href="javascript:void(0);">極淺烘焙</a></li>
+            <li ><a  data-num="2" href="javascript:void(0);">淺烘焙</a></li>
+            <li ><a  data-num="3" href="javascript:void(0);">中烘焙</a></li>
+            <li ><a  data-num="4" href="javascript:void(0);">中深烘培</a></li>
+            <li ><a  data-num="5" href="javascript:void(0);">深烘培</a></li>
         </div>
     </div>
 </div>
@@ -252,7 +259,7 @@
 <!-- <section class="item-bg"> -->
     <div class="container">
         <div class="row">
-        <div class="col-6 col-md-4 col-lg-3">
+        <div class="col-6 col-md-4 col-lg-3 bbean1">
             <div class="bean_item ">
                 <a href="./07-1-arabica.html"><img src="./pic/dry_bean/dry_bean (1).png" alt="">
                 <h2>阿拉比卡咖啡豆</h2>
@@ -266,50 +273,7 @@
                 </div>             
             </div></a>
         </div>
-        <div class="col-6 col-md-4 col-lg-3">
-            <div class="bean_item">
-                <a href="./07-2-yiga.html"><img src="./pic/dry_bean/dry_bean (3).png" alt=""> 
-                <h2>耶加雪夫咖啡豆</h2>
-                <div class="txt">
-                    <span>NT900</span>
-                    <span>NT600</span>  
-                </div>
-                <div class="btn">
-                    <button class="goshop">加入購物車</button>
-                    <button class="goshop shop2">直接購買</button>
-                </div> </a>    
-            </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-            <div class="bean_item bean_item1">
-                <a href="./07-3-mannin.html"><img src="./pic/dry_bean/dry  (1).jpg" alt="">
-                <h2>曼特寧咖啡豆</h2>
-                <div class="txt">
-                    <span>NT900</span>
-                    <span>NT700</span>  
-                </div>
-                <div class="btn">
-                    <button class="goshop">加入購物車</button>
-                    <button class="goshop shop2">直接購買</button>
-                </div>            
-            </div></a>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-3">
-            <div class="bean_item">
-                <a href="./07-5-grand.html"><img src="./pic/dry_bean/dry  (2).jpg" alt=""> 
-                <h2>佳景莊園咖啡豆</h2>
-                <div class="txt">
-                    <span>NT900</span>
-                    <span>NT500</span>    
-                </div>
-                <div class="btn">
-                    <button class="goshop">加入購物車</button>
-                    <button class="goshop shop2">直接購買</button>
-                </div>              
-            </div></a>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
+        <div class="col-6 col-md-4 col-lg-3 bbean1">
             <div class="bean_item ">
                 <a href="./07-4-ali.html"><img src="./pic/dry_bean/dry_bean (4).png" alt="">
                 <h2>阿里山咖啡豆</h2>
@@ -323,8 +287,53 @@
                 </div>             
             </div></a>
         </div>
+        <div class="col-6 col-md-4 col-lg-3 bbean1">
+            <div class="bean_item ">
+                <a href="./07-2-yiga.html"><img src="./pic/dry_bean/dry_bean (3).png" alt=""> 
+                <h2>耶加雪夫咖啡豆</h2>
+                <div class="txt">
+                    <span>NT900</span>
+                    <span>NT600</span>  
+                </div>
+                <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                </div> </a>    
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 bbean1">
+            <div class="bean_item ">
+                <a href="./07-5-grand.html"><img src="./pic/dry_bean/dry  (2).jpg" alt=""> 
+                <h2>佳景莊園咖啡豆</h2>
+                <div class="txt">
+                    <span>NT900</span>
+                    <span>NT500</span>    
+                </div>
+                <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                </div>              
+            </div></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 bbean1">
+            <div class="bean_item ">
+                <a href="./07-3-mannin.html"><img src="./pic/dry_bean/dry  (1).jpg" alt="">
+                <h2>曼特寧咖啡豆</h2>
+                <div class="txt">
+                    <span>NT900</span>
+                    <span>NT700</span>  
+                </div>
+                <div class="btn">
+                    <button class="goshop">加入購物車</button>
+                    <button class="goshop shop2">直接購買</button>
+                </div>            
+            </div></a>
+        </div>
+      
+      
+       
         <div class="col-6 col-md-4 col-lg-3">
-            <div class="bean_item">
+            <div class="bean_item bean_item1">
                 <a href="./07-1-arabica.html"><img src="./pic/dry_bean/dry_bean (1).png" alt=""> 
                 <h2>阿拉比卡咖啡豆</h2>
                 <div class="txt">
@@ -353,7 +362,7 @@
         </div>
 
         <div class="col-6 col-md-4 col-lg-3">
-            <div class="bean_item">
+            <div class="bean_item bean_item1">
                 <a href="./07-4-ali.html"><img src="./pic/dry_bean/dry_bean (4).png" alt=""> 
                 <h2>阿里山咖啡豆</h2>
                 <div class="txt">
@@ -367,7 +376,7 @@
             </div></a>
         </div>
         <div class="col-6 col-md-4 col-lg-3">
-            <div class="bean_item ">
+            <div class="bean_item bean_item1">
                  <a href="./07-5-grand.html"><img src="./pic/dry_bean/dry  (2).jpg" alt="">
                 <h2>佳景莊園咖啡豆</h2>
                 <div class="txt">
@@ -381,7 +390,7 @@
             </div>
         </div>
         <div class="col-6 col-md-4 col-lg-3">
-            <div class="bean_item">
+            <div class="bean_item bean_item1">
                  <a href="./07-3-mannin.html"><img src="./pic/dry_bean/dry  (1).jpg" alt=""> 
                 <h2>曼特寧咖啡豆</h2>
                 <div class="txt">
@@ -411,7 +420,7 @@
         </div>
 
         <div class="col-6 col-md-4 col-lg-3">
-            <div class="bean_item">
+            <div class="bean_item bean_item1">
                  <a href="./07-4-ali.html"><img src="./pic/dry_bean/dry_bean (4).png" alt=""> 
                 <h2>阿里山咖啡豆</h2>
                 <div class="txt">
@@ -423,6 +432,7 @@
                     <button class="goshop shop2">直接購買</button>
                 </div>     </a>
             </div>
+        
         </div>
       </div>
     </div>
@@ -474,4 +484,5 @@
 </div>    
 
 </body>
+<script src="bean.js"></script>
 </html>

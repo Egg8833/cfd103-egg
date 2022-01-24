@@ -90,7 +90,7 @@
   display: none;
 }
 
-/* ==============手機 */
+/* ==============平板 */
 @media screen and (max-width: 768px) {
   .main-header {
     justify-content: space-between;

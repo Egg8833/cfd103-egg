@@ -104,7 +104,9 @@
     }
     .article_top_wrap{
         width: 189px;
-        height: 2000px;
+        max-height: 2000px;
+        min-height: 100vh;
+
         position: absolute;
         top: 0px;
         right: 0px;
@@ -260,6 +262,12 @@
         }
         
     }
+    .active{
+        display: none;
+    }
+    .main-footer{
+        margin-top: 50px;
+    }
 
 
 
@@ -308,13 +316,12 @@
     <!-- 文章類型選項 -->
 <div class="article_wrap">
     <div class="article_list">
-        <div class="list_item"> 
+        <div class="list_item dataItem"> 
             <span><b>類型</b></span>
-            <li><a href="">全部</a></li>
-            <li><a href="">咖啡小知識</a></li>
-            <li><a href="">沖泡技術</a></li>
-            <li><a href="">咖啡影片</a></li>
-        </button>
+            <li><a data-num="1" href="javascript:void(0);">全部</a></li>
+            <li><a data-num="2" href="javascript:void(0);">咖啡小知識</a></li>
+            <li><a data-num="3" href="javascript:void(0);">沖泡技術</a></li>
+            <li><a data-num="4" href="javascript:void(0);">咖啡影片</a></li>
         </div>
         <div class="list_item  item1"> 
         <span><b>搜尋</b></span>
@@ -369,9 +376,9 @@
 
     <!-- 文章列表 -->
 
-    <div class="article">
+    <div class="article " >
         <div class="big_article">
-        <div class="article_item">
+        <div data-type="kn"class="article_item">
             <div class="article_item_pic">
                 <a href=""><img src="./圖片/咖啡學院/咖啡小知識 300X200.jpg" alt=""></a>
             </div>
@@ -387,7 +394,7 @@
             </div>  
         </div> 
 
-        <div class="article_item article1">
+        <div data-type="kn" class="article_item article1">
             <div class="article_item_pic">
                 <a href=""><img src="./圖片/咖啡學院/咖啡小知識 巴西.jpg" alt=""></a>
             </div>
@@ -402,7 +409,7 @@
                 </div>
             </div>  
         </div> 
-        <div class="article_item article1">
+        <div data-type="kn" class="article_item article1">
             <div class="article_item_pic">
                 <a href=""><img src="./圖片/咖啡學院/咖啡小知識 曼特寧.jpg" alt=""></a>
             </div>
@@ -417,7 +424,7 @@
                 </div>
             </div>  
         </div>      
-        <div class="article_item article1">
+        <div  data-type="sk" class="article_item article1">
             <div class="article_item_pic">
                 <a href=""><img src="./圖片/咖啡學院/基礎手沖.jpg" alt=""></a>
             </div>
@@ -433,7 +440,7 @@
             </div>  
         </div>                
         
-        <div class="article_item article1">
+        <div  data-type="mv" class="article_item article1">
             <div class="article_item_pic">
                 <a href=""><img src="./圖片/咖啡學院/影片 轟鬥雞介紹.jpg" alt=""></a>
             </div>
@@ -449,7 +456,7 @@
             </div>  
         </div>        
 
-        <div class="article_item article1">
+        <div  data-type="kn" class="article_item article1">
             <div class="article_item_pic">
                 <a href=""><img src="./圖片/咖啡學院/咖啡小知識-櫻桃採收.jpg" alt=""></a>
             </div>
@@ -464,7 +471,7 @@
                 </div>
             </div>  
         </div>
-        <div class="article_item article1">
+        <div  data-type="sk" class="article_item article1">
             <div class="article_item_pic">
                 <a href=""><img src="./圖片/咖啡學院/手沖黃金比例.jpg" alt=""></a>
             </div>
@@ -479,7 +486,7 @@
                 </div>
             </div>  
         </div>       
-        <div class="article_item article1" >
+        <div  data-type="mv" class="article_item article1" >
             <div class="article_item_pic"  >
                 <a href=""><img src="./圖片/咖啡學院/試烘影片.jpg" alt=""></a>
             </div>
@@ -543,4 +550,5 @@
         </div>
     </div>    
 </body>
+<script src="school.js"></script>
 </html>
