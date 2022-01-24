@@ -50,20 +50,3 @@ dataItem.addEventListener('click',(e)=>{
    }
 })
 
-
-// list.addEventListener('click',(e)=>{
-//     console.log(e.target.dataset.num);
-//     console.log(e.target.nodeName);
-//     if(e.target.nodeName =='A'){
-//         let num =e.target.dataset.num;
-//         for(i=0;i<beansDry.length;i++){
-//             beansDry[i].classList.add('active')
-//         }
-    
-//         for(i=0;i<beans.length;i++){
-//             beans[i].classList.add('active')
-//         }
-    
-//         beansDry[num-1].classList.remove('active')
-//     }
-// })
