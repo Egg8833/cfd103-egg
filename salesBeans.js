@@ -1,7 +1,6 @@
 const saleBar =document.querySelector('.sale-bar')
 const num2=document.querySelector('.num2')
 
-
 saleBar.addEventListener('click',(e)=>{
    
     let a=0;
@@ -30,6 +29,7 @@ saleBar.addEventListener('click',(e)=>{
     }
 
 })
+
 
 
 
