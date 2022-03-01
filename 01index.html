@@ -522,6 +522,7 @@
             content: '';
             width: 100%;  
         }
+       
 
 
 
@@ -670,11 +671,11 @@
     <h2>烘焙度選擇</h2>
 </div>
     <div class="markc">
-        <a  id="dry1" onClick="showans1()"><span>極淺焙</span></a>
-        <a  id="dry2" onClick="showans2()"><span>淺焙</span></a>
-        <a  id="dry3" onClick="showans3()"><span>中焙</span></a>
-        <a  id="dry4" onClick="showans4()"><span>中深焙</span></a>
-        <a  id="dry5" onClick="showans5()"><span>深焙</span></a>
+        <a ><span data-dry="1">極淺焙</span></a>
+        <a ><span data-dry="2">淺焙</span></a>
+        <a ><span data-dry="3">中焙</span></a>
+        <a ><span data-dry="4">中深焙</span></a>
+        <a ><span data-dry="5">深焙</span></a>
     </div>
     
 <!-- 第一組 淺碚咖啡 -->
@@ -1093,41 +1094,18 @@
 </div>    
 </body>
 <script>
-    function showans1(){
-        document.getElementById("container1").style.display="";
-        document.getElementById("container2").style.display="none";
-        document.getElementById("container3").style.display="none";
-        document.getElementById("container4").style.display="none";
-        document.getElementById("container5").style.display="none";
+let markc=document.querySelector('.markc')
+console.log(markc);
+markc.addEventListener('click',(e)=>{
+   if(e.target.nodeName ==='SPAN'){
+    let num =e.target.dataset.dry;
+    for(i=1;i<=5;i++){
+        document.getElementById(`container${i}`).style.display="none";
     }
-    function showans2(){
-        document.getElementById("container1").style.display="none";
-        document.getElementById("container2").style.display="";
-        document.getElementById("container3").style.display="none";
-        document.getElementById("container4").style.display="none";
-        document.getElementById("container5").style.display="none";
-    }
-    function showans3(){
-        document.getElementById("container1").style.display="none";
-        document.getElementById("container2").style.display="none";
-        document.getElementById("container3").style.display="";
-        document.getElementById("container4").style.display="none";
-        document.getElementById("container5").style.display="none";
-    }
-    function showans4(){
-        document.getElementById("container1").style.display="none";
-        document.getElementById("container2").style.display="none";
-        document.getElementById("container3").style.display="none";
-        document.getElementById("container4").style.display="";
-        document.getElementById("container5").style.display="none";
-    }
-    function showans5(){
-        document.getElementById("container1").style.display="none";
-        document.getElementById("container2").style.display="none";
-        document.getElementById("container3").style.display="none";
-        document.getElementById("container4").style.display="none";
-        document.getElementById("container5").style.display="";
-    }
+    document.getElementById(`container${num}`).style.display="";
+   }
+   
+})
     
     </script> 
      <script src="./bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js" ></script>
